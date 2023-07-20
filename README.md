@@ -27,7 +27,7 @@ Resource: pods
 ```
 
 ```console
-# Terminal 3
+# Terminal 1
 $ go run extended-apiserver/main.go
 2023/07/20 15:45:46 listening on 127.0.0.2:8443
 
