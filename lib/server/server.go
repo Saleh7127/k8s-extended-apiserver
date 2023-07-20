@@ -3,9 +3,9 @@ package server
 import (
 	"crypto/tls"
 	"crypto/x509"
+	"io/ioutil"
 	"log"
 	"net/http"
-	"os"
 	"time"
 )
 
@@ -45,7 +45,7 @@ func (s GenericServer) tlsConfig() *tls.Config {
 
 	caCertPool := x509.NewCertPool()
 	for _, caFile := range s.cfg.CACertFiles {
-		caCert, err := os.ReadFile(caFile)
+		caCert, err := ioutil.ReadFile(caFile)
 		if err != nil {
 			log.Fatal(err)
 		}

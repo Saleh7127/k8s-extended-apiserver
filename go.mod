@@ -9,4 +9,4 @@ require (
 	k8s.io/client-go v9.0.0+incompatible
 )
 
-require golang.org/x/text v0.8.0 // indirect
+require golang.org/x/text v0.9.0 // indirect
