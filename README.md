@@ -5,8 +5,8 @@ Resource:
 2. https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/apiserver-aggregation/
 3. https://kubernetes.io/docs/tasks/extend-kubernetes/configure-aggregation-layer/
 4. https://medium.com/@vanSadhu/kubernetes-api-aggregation-setup-nuts-bolts-733fef22a504
-5. https://github.com/tamalsaha/DIY-k8s-extended-apiserver/tree/master [**]
-6. https://youtu.be/pTIwy6fpxwY [**]
+5. https://github.com/tamalsaha/DIY-k8s-extended-apiserver/tree/master [***]
+6. https://youtu.be/pTIwy6fpxwY [***]
 
 
 Execution Process List:

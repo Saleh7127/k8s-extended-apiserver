@@ -29,9 +29,9 @@ var crtPath = "/home/user/go/src/github.com/Saleh7127/k8s-extended-apiserver/cer
 func main() {
 
 	var proxy = false
-	flag.BoolVar(&proxy, "send-proxy-request", proxy, "forward requests to database extended apiserver")
+	flag.BoolVar(&proxy, "send-proxy-request", proxy, "forward requests to database extended api-server")
 	flag.Parse()
-	fmt.Println("forward", proxy)
+	fmt.Println("forward ", proxy)
 
 	fs := afero.NewOsFs()
 	store, err := certstore.NewCertStore(fs, crtPath)
@@ -68,7 +68,7 @@ func main() {
 	ErrorNotNill(err)
 
 	rhClientCert, rhClientKey, err := rhStore.NewClientCertPair(cert.AltNames{
-		DNSNames: []string{k8s_extended_apiserver.ApiServer}, // because apiserver is making the calls to extended api server
+		DNSNames: []string{k8s_extended_apiserver.ApiServer}, // because api-server is making the calls to extended api server
 	})
 	ErrorNotNill(err)
 

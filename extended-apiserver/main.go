@@ -26,7 +26,7 @@ var crtPath = "/home/user/go/src/github.com/Saleh7127/k8s-extended-apiserver/cer
 func main() {
 
 	var proxy = false
-	flag.BoolVar(&proxy, "receive-proxy-request", proxy, "receive forwarded requests from apiserver")
+	flag.BoolVar(&proxy, "receive-proxy-request", proxy, "receive forwarded requests from api-server")
 	flag.Parse()
 	fmt.Println("forward", proxy)
 
@@ -107,10 +107,10 @@ func main() {
 			}
 
 			if _, err := request.TLS.PeerCertificates[0].Verify(opts); err != nil {
-				user = request.TLS.PeerCertificates[0].Subject.CommonName // user name from client cert
+				user = request.TLS.PeerCertificates[0].Subject.CommonName // username from client cert
 				src = k8s_extended_apiserver.ClientCertCn
 			} else {
-				user = request.Header.Get(k8s_extended_apiserver.RemoteUser) // user name from header value passed by apiserver
+				user = request.Header.Get(k8s_extended_apiserver.RemoteUser) // username from header value passed by api-server
 				src = k8s_extended_apiserver.RemoteUser
 			}
 		}
